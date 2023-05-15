@@ -1,0 +1,126 @@
+.topbarContainer{
+    height: 50px;
+    width: 100%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.topbarLeft{
+  flex: 3;
+}
+
+.logo{
+   font-size: 24px;
+   margin-left: 20px;
+   font-weight: bold;
+   color: white;
+   cursor: pointer;
+}
+
+.topbarCenter{
+  flex: 5;
+}
+
+.searchBar{
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon{
+   font-size: 20px !important;
+   margin-left: 10px;
+
+}
+
+.searchInput{
+    border: none;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.searchInput:focus{
+    outline: none;
+}
+
+.topbarRight{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.topbarLink{
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.topbarIcons{
+    display: flex;
+}
+
+.topbarIconItem{
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.topbarIconBadge{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.topbarImg{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px; /* adjust this value based on your design */
+  width: 100%;
+  max-width: 695px;
+  z-index: 999;
+  background-color:white;
+  border: 0px solid gray;
+  border-radius: 10px;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown ul li {
+  color: black;
+  padding: 12px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown ul li:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}

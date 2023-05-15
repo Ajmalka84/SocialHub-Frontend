@@ -1,0 +1,39 @@
+/* styles.css */
+.userList {
+  flex: 4;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #eee;
+}
+
+.tableUserButton {
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.tableUserButton:hover {
+  background-color: #006666;
+}
+
+
+
+
+

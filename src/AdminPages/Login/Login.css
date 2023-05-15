@@ -1,0 +1,73 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .adminForm {
+    width: 400px;
+    padding: 40px;
+    /* padding-right: 60px; */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .adminHeading {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .adminLabel {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .inputEmail,
+  .inputPassword {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .inputEmail:focus,
+  .inputPassword:focus {
+    outline: none;
+    border-color: #4b9bd1;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+    margin-top: 5px;
+  }
+  
+  .adminSubmitButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4b9bd1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .adminSubmitButton:hover {
+    background-color: #357ca5;
+  }
+  
