@@ -32,7 +32,7 @@ function Login() {
   const formSubmit = async (data) => {
     await axios
       .post(
-        "http://localhost:8000/auth/login",
+        "http://3.83.38.239/auth/login",
         { ...data },
         {
           withCredentials: true,
