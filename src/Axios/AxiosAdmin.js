@@ -9,7 +9,7 @@ const AxiosAdminJwt = () => {
   const { AdminAuth } = useContext(AuthContext);
   
   const AxiosAdmin = axios.create({
-    baseURL: "http://3.83.38.239/admin/",
+    baseURL: "http://socialhub.website/admin/",
   });
 
   AxiosAdmin.interceptors.request.use(
