@@ -28,7 +28,7 @@ const AdminLogin = () => {
   const handleSubmit = async(event) => {
     event.preventDefault();
     try {
-      const res = await axios.post("http://socialhub.website/admin/login", {email : email , password : password})
+      const res = await axios.post("https://socialhub.website/admin/login", {email : email , password : password})
       setAdminAuth(prev => ({...prev,...res.data}));
       localStorage.setItem('AdminAccessToken' , res.data.adminToken)
       navigate('/admin' , {replace : true})

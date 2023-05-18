@@ -18,7 +18,7 @@ function ChangePassword ({mobile , setVerify}) {
     setVerify(false)
   }
   let resetPassword = async (data) => {
-    await axios.post('http://socialhub.website/auth/reset_password', {...data, mobile: mobile}).then((result)=>{
+    await axios.post('https://socialhub.website/auth/reset_password', {...data, mobile: mobile}).then((result)=>{
       toast.success("password changed successfully" , {
         position: toast.POSITION.TOP_RIGHT,
         style: { top: '80px', right : '280px'},

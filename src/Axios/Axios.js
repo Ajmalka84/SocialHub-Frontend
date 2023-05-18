@@ -8,7 +8,7 @@ const AxiosWithAuth = () => {
   const { Auth, setAuth } = useContext(AuthContext);
 
   const AxiosJWT = axios.create({
-    baseURL: "http://socialhub.website/",
+    baseURL: "https://socialhub.website/",
   });
 
   AxiosJWT.interceptors.request.use(
@@ -20,7 +20,7 @@ const AxiosWithAuth = () => {
         if (decodedToken?.exp * 1000 < currentDate.getTime()) {
           console.log("its here in the interceptors");
           console.log(decodedToken);
-          const res = await axios.get("http://socialhub.website/auth/refresh", {
+          const res = await axios.get("https://socialhub.website/auth/refresh", {
             withCredentials: true,
           });
           newAuth = res.data.accessToken;

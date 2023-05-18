@@ -62,7 +62,7 @@ function Register() {
   async function onSignup(data) {
    setUserData({...data})
    await axios
-    .post("http://socialhub.website/auth/check-mobile", {
+    .post("https://socialhub.website/auth/check-mobile", {
       email: userData.email,
       mobile: userData.mobile, 
     }).then((result)=>{
@@ -97,7 +97,7 @@ function Register() {
         console.log("its confirmed");
         
         await axios
-          .post("http://socialhub.website/auth/register", {
+          .post("https://socialhub.website/auth/register", {
             username: userData.username,
             email: userData.email,
             password: userData.password,
@@ -131,7 +131,7 @@ function Register() {
   const formSubmit = async (data) => {
     console.log(data);
     await axios
-      .post("http://socialhub.website/auth/sendOtp", { ...data })
+      .post("https://socialhub.website/auth/sendOtp", { ...data })
       .then((result) => {
         setForm(data);
         setVerify(true);

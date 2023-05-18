@@ -8,7 +8,7 @@ const useRefreshToken = () => {
   const navigate = useNavigate()
   const refresh = async () => {
     await axios
-      .get("http://3.83.38.239/auth/refresh", { withCredentials: true })
+      .get("https://3.83.38.239/auth/refresh", { withCredentials: true })
       .then((result) => {
         setAuth((prev) => {
           return {

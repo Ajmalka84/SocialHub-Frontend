@@ -26,7 +26,7 @@ function Options({ post, setPosts }) {
       const res = await axiosJWT.post('/post/update' ,{postId : post._id , desc : inputText , userId : decodedAuth._id})
       // setTimeout(()=>{toast.success("Post edited successfully")},10)
       const loadPosts = await axiosJWT
-      .get("http://socialhub.website/post/all-posts")
+      .get("https://socialhub.website/post/all-posts")
       setPosts([...loadPosts.data])
       setOpen(false)
       
@@ -39,12 +39,12 @@ function Options({ post, setPosts }) {
   const onCloseModal = () => setOpen(false);
   const deletePost = async () => {
     await axiosJWT
-      .delete(`http://socialhub.website/post/${post._id}/delete`, {
+      .delete(`https://socialhub.website/post/${post._id}/delete`, {
         data: { userId: post.userId },
       })
       .then(async (result) => {
         await axiosJWT
-          .get("http://socialhub.website/post/all-posts")
+          .get("https://socialhub.website/post/all-posts")
           .then((allposts) => {
             setPosts([...allposts.data]);
           });

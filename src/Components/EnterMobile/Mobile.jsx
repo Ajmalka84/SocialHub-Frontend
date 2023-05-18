@@ -62,7 +62,7 @@ function Mobile({ setVerify }) {
         console.log(res);
         console.log("its confirmed");
         await axios
-          .post("http://socialhub.website/auth/forgot_password", {
+          .post("https://socialhub.website/auth/forgot_password", {
             mobile: mobile,
           })
           .then((result) => {

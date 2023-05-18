@@ -32,7 +32,7 @@ function Login() {
   const formSubmit = async (data) => {
     await axios
       .post(
-        "http://socialhub.website/auth/login",
+        "https://socialhub.website/auth/login",
         { ...data },
         {
           withCredentials: true,
