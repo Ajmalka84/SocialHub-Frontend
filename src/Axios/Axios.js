@@ -8,7 +8,7 @@ const AxiosWithAuth = () => {
   const { Auth, setAuth } = useContext(AuthContext);
 
   const AxiosJWT = axios.create({
-    baseURL: "http://localhost:8000/",
+    baseURL: "http://3.83.38.239/",
   });
 
   AxiosJWT.interceptors.request.use(
@@ -20,7 +20,7 @@ const AxiosWithAuth = () => {
         if (decodedToken?.exp * 1000 < currentDate.getTime()) {
           console.log("its here in the interceptors");
           console.log(decodedToken);
-          const res = await axios.get("http://localhost:8000/auth/refresh", {
+          const res = await axios.get("http://3.83.38.239/auth/refresh", {
             withCredentials: true,
           });
           newAuth = res.data.accessToken;

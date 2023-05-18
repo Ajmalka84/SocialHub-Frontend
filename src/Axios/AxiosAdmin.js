@@ -9,7 +9,7 @@ const AxiosAdminJwt = () => {
   const { AdminAuth } = useContext(AuthContext);
   
   const AxiosAdmin = axios.create({
-    baseURL: "http://localhost:8000/admin/",
+    baseURL: "http://3.83.38.239/admin/",
   });
 
   AxiosAdmin.interceptors.request.use(
