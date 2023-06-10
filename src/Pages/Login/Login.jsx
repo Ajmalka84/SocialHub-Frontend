@@ -82,7 +82,7 @@ function Login() {
             <Mobile setVerify={setVerify} />
           ) : (
             
-            <form onSubmit={handleSubmit(formSubmit)} className="loginBox">
+            <form onSubmit={handleSubmit(formSubmit)} className="loginBox1">
               
               <Input
                 id="email"
@@ -101,9 +101,9 @@ function Login() {
               <button className="loginButton" type="submit">
                 Log In
               </button>
-              <span className="loginForgot" onClick={loginForgot}>
+              {/* <span className="loginForgot" onClick={loginForgot}>
                 Forgot Password ?
-              </span>
+              </span> */}
               <button onClick={redirect} className="loginRegisterButton">
                 Create a New Account
               </button>
