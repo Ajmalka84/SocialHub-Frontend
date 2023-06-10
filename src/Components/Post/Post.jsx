@@ -8,6 +8,7 @@ import Options from "../Options/Options";
 import Comments from "../Comments/Comments";
 import AxiosWithAuth from "../../Axios/Axios";
 import jwtDecode from "jwt-decode";
+import { Link } from "react-router-dom";
 // import { Users } from "../../dummy";
 
 function Post({ profilePicture, post, setPosts }) {
@@ -58,12 +59,13 @@ function Post({ profilePicture, post, setPosts }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            {/* <img src={Users.filter((u)=>u.id === post.userId)[0].profilePicture} alt="shareImg" className="postProfileImg"/> */}
-            {post?.userDetails?.profilePicture ? <img src={post?.userDetails?.url2 } alt="shareImg" className="postProfileImg" /> : <img src="/assets/NoPhoto.jpg" alt="shareImg" className="postProfileImg" />}
             
+            {post?.userDetails?.profilePicture ? <Link to={`/profile/${post?.userDetails?._id}`} key={post?.userDetails?._id} style={{ textDecoration: "none" }}> <img src={post?.userDetails?.url2 } alt="shareImg" className="postProfileImg" /></Link> : <Link to={`/profile/${post?.userDetails?._id}`} key={post?.userDetails?._id} style={{ textDecoration: "none" }}> <img src="/assets/NoPhoto.jpg" alt="shareImg" className="postProfileImg" /></Link>}
+            <Link to={`/profile/${post?.userDetails?._id}`} key={post?.userDetails?._id} style={{ textDecoration: "none" , color : 'black' }}>
             <span className="postUsername">
               {post?.userDetails?.username ? post?.userDetails?.username : "some error"}
             </span>
+            </Link>
             <span className="postDate">{format(post?.createdAt)}</span>
           </div>
           <div className="postTopRight">

@@ -120,7 +120,7 @@ function Rightbar({ profile, RightbarUser }) {
             ? friends.map((friend) => (
                 <Link
                   to={`/profile/${friend?._id}`}
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: "none" ,color : 'black' }}
                 >
                   <div className="rightbarFollowing" key={friend._id}>
                     {friend?.profilePicture ? (
